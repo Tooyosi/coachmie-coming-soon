@@ -47,7 +47,7 @@ const Header = (props) => {
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="ml-auto" navbar>
                         <NavItem className={`${getActiveClassName('/')}`}>
-                            <Link className="nav-link" to="info@prodevs.io" target="_blank">About Us</Link>
+                            <NavLink className="nav-link" href="https://www.prodevs.io/about" target="_blank">About Us</NavLink>
                         </NavItem>
                         <NavItem className={`${getActiveClassName('/#trackrecord')}`}>
                             <NavLink  href="https://app.prodevs.io/explore" target="_blank">Explore</NavLink>
@@ -56,7 +56,7 @@ const Header = (props) => {
                             <a className="nav-link" href="mailto:info@prodevs.io">Contact</a>
                         </NavItem>
                         <NavItem className={`${getActiveClassName('/blog')}`}>
-                            <a className="nav-link" href="https://app.prodevs.io/explore" target="_blank">Blog</a>
+                            <a className="nav-link" href="https://blog.prodevs.io/?gi=38c78a8e64b0" target="_blank">Blog</a>
                         </NavItem>
                     </Nav>
                 </Collapse>
