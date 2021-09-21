@@ -9,13 +9,13 @@ function Footer() {
             <div className="container">
                 <div>
                     <p className="small">Visit our social media pages:
-                        <a className="mx-3" href>
+                        <a className="mx-3" href="https://www.linkedin.com/company/prodevs-nigeria/?viewAsMember=true" target="_blank">
                             <img src={require('../../assets/images/svgs/linkedin.svg').default} width="20" />
                         </a>
-                        <a href>
+                        <a href="https://twitter.com/Prodevs_io" target="_blank">
                             <img src={require('../../assets/images/svgs/facebook.svg').default} width="20" />
                         </a>
-                        <a className="mx-3" href>
+                        <a className="mx-3" href="https://web.facebook.com/prodevs.io?_rdc=1&_rdr" target="_blank">
                             <img src={require('../../assets/images/svgs/twitter.svg').default} width="20" />
                         </a>
 

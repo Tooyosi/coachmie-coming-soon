@@ -47,16 +47,16 @@ const Header = (props) => {
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="ml-auto" navbar>
                         <NavItem className={`${getActiveClassName('/')}`}>
-                            <Link className="nav-link" to="/">About Us</Link>
+                            <Link className="nav-link" to="info@prodevs.io" target="_blank">About Us</Link>
                         </NavItem>
                         <NavItem className={`${getActiveClassName('/#trackrecord')}`}>
-                            <NavLink  href="/#trackrecord">Explore</NavLink>
+                            <NavLink  href="https://app.prodevs.io/explore" target="_blank">Explore</NavLink>
                         </NavItem>
                         <NavItem className={`${getActiveClassName('/contact')}`}>
-                            <a className="nav-link" href="/contact">Contact</a>
+                            <a className="nav-link" href="mailto:info@prodevs.io">Contact</a>
                         </NavItem>
                         <NavItem className={`${getActiveClassName('/blog')}`}>
-                            <a className="nav-link" href={`${process.env.REACT_APP_BASE_URL}`} target="blank">Blog</a>
+                            <a className="nav-link" href="https://app.prodevs.io/explore" target="_blank">Blog</a>
                         </NavItem>
                     </Nav>
                 </Collapse>
