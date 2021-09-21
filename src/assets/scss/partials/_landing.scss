@@ -1,0 +1,50 @@
+*{
+    font-family: Proxima Nova;
+}
+.content{
+    min-height: 85vh;
+    .underline{
+        // padding: 2px;
+        height: 0px;
+        max-width:104px;
+        background-color: $primary;
+        display: block;
+        border: 2px solid $primary;
+        border-radius: 35px;
+        transform: rotate(0.09deg);
+    }
+    .email-div{
+        display: flex;
+        border-color: $primary;
+        box-shadow: 0 0 0 0.2rem $primary;
+        max-width: 300px;
+        height: 40px;
+        &:focus-within{
+            color: #495057;
+            background-color: #fff;
+            outline: 0;
+        }
+        
+        
+        input{
+            // width: 100%;
+            height: 100%    ;
+            outline: none;
+            padding: 0;
+            margin: 0;
+            box-shadow: none;
+            border: none;
+            background-image: none !important;
+            &:focus{
+                outline: none;
+                box-shadow: none;
+                border: none;
+                background-image: none !important;
+            }
+        }
+        button{
+            border-radius: 0 !important;
+        }
+
+    }
+}
