@@ -1,16 +1,18 @@
 import React, {useState} from 'react'
 import { Button, Col, Container, Row } from 'reactstrap'
 import CustomModal from '../../../components/common/CustomModal'
-
+import axios from "axios"
+import { toast } from 'react-toastify'
 export default function Content() {
     const [state, setState] = useState({
         showModal: false,
-        email: ''
+        email: '', 
+        loading: false
     })
 
     const toggleModal = ()=>{
         setState({
-            ...state, showModal: !state.showModal, email: ''
+            ...state, showModal: !state.showModal, email: '', loading: false
         })
     }
 
@@ -18,6 +20,19 @@ export default function Content() {
         setState({
             ...state, [name]: value
         })
+    }
+
+    const submit = async (e)=>{
+        e.preventDefault()
+        try {
+            setState({
+                ...state, loading: true
+            })
+            let {data} = await axios.get(`https://app.prodevs.io/api/join/proInnovate/waitinglist?email=${state.email}`)
+            toggleModal()
+        } catch (error) {
+            toast.error(error?.response?.data?.message ||"An error occured, please try again")
+        }
     }
     return (
         <div className="content d-flex align-items-center">
@@ -38,20 +53,20 @@ export default function Content() {
 
                     </p>
                     <h6 className="font-weight-bolder">Be the first to know when we launch.</h6>
-                    <div className="email-div my-3">
+                    <form className="email-div my-3" onSubmit={submit}>
                         <input 
                             type="email" 
-                            required 
                             onChange={handleChange} 
                             value={state.email} 
                             name="email"
+                            required={true}
                             placeholder="Enter Email Address" 
                             className="p-2" />
-                        <Button color="primary" className="ml-auto px-2" onClick={toggleModal}>Join Waitlist</Button>
-                    </div>
+                        <Button color="primary" disabled={state.loading} type="submit" role="submit" className="ml-auto px-2" >{state.loading? "Requesting...": "Join Waitlist"}</Button>
+                    </form>
                 </Col>
-                <Col md={{size: "6", offset: "2"}} className="d-md-block d-none text-center">
-                    <img src={require('../../../assets/images/svgs/SideImage.svg').default} width="450"/>
+                <Col md={{size: "6", offset: "2"}} className="text-center">
+                    <img alt="side" src={require('../../../assets/images/svgs/SideImage.svg').default} style={{maxWidth: 450}} className="w-100"/>
                 </Col>
             </Row>
         </Container>

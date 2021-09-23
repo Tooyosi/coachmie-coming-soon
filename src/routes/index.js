@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Landing from "../pages/Landing";
 import ScrollToTop from "../components/common/ScrollToTop";
+import { ToastContainer } from 'react-toastify';
 
 
 const Routes = () => (
@@ -16,6 +17,7 @@ const Routes = () => (
         <Route path="/" component={Landing} />
         <Redirect from="*" to="/"/>
       </Switch>
+      <ToastContainer />
     </ScrollToTop>
   </Router>
 );
