@@ -35,25 +35,28 @@ export default function Content() {
         }
     }
     return (
-        <div className="content d-flex align-items-center">
+        <div className="content d-flex align-items-center mt-md-1 mt-sm-5">
         <Container>
             <Row>
                 <Col md="4">
-                    <h3 className="text-primary mt-4 font-weight-bolder mb-0">Coming  Soon!</h3>
+                    <h3 className="text-primary mt-5 font-weight-bolder mb-0">Coming  Soon!</h3>
                     {/* <hr className="mb-4" /> */}
                     <span className="underline mb-4 mt-1"></span>
 
-                    <h1 className="font-weight-bolder">Launch Your Idea, <br /> Find Great Talents</h1>
+                    <h1 className="font-weight-bolder">Launch Your Idea, <br /> Build smartly. Scale Quickly.</h1>
                     <p className="mt-4 mb-2">
-                        Tired of holding back on that start up idea due to low funds in finding great talents? <br />
+                    Do you have an awesome idea but you are unsure of how to bring it to life? Are you lacking the skills and know-how to take it to the next level? <br />
 
                     </p>
-                    <p className="mb-4 mt-2">
-                    Use <span className="text-primary">ProInnovate</span> to get top notch talents and your ideas out to the world.
+                    <p className="mb-1 mt-2">
+                    <span className="text-primary">ProInnovate</span> is the solution you have been looking for!.
 
                     </p>
-                    <h6 className="font-weight-bolder">Be the first to know when we launch.</h6>
-                    <form className="email-div my-3" onSubmit={submit}>
+                    <p className="mb-4 mt-0">
+                    Have a team of skilled developers ideate your idea and get skilled tech talents to work on bringing it to life. All within an affordable budget!
+                    </p>
+                    <h6 className="font-weight-bolder">Be the first to know when <span className="text-primary">ProInnovate</span> is launched.</h6>
+                    <form className="email-div mt-3 mb-5 mb-md-3" onSubmit={submit}>
                         <input 
                             type="email" 
                             onChange={handleChange} 
