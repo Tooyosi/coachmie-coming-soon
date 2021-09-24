@@ -45,7 +45,7 @@ const Header = (props) => {
                 </Link>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
-                    <Nav className="ml-auto" navbar>
+                    <Nav className="ml-auto mt-md-0 mt-4" navbar>
                         <NavItem className={`${getActiveClassName('/')}`}>
                             <NavLink className="nav-link" href="https://www.prodevs.io/about" target="_blank">About Us</NavLink>
                         </NavItem>

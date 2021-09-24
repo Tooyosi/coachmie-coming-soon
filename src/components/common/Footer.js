@@ -6,7 +6,7 @@ import Logo from './Logo'
 function Footer() {
     return (
         <Navbar >
-            <div className="container d-block d-md-flex">
+            <div className="container d-block d-md-flex mt-4">
                 <div className="d-block d-md-flex mb-3">
                     <p className="small mr-3 mb-1">Visit our social media pages:
                     </p>
