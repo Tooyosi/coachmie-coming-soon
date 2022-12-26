@@ -5,32 +5,64 @@ import Logo from './Logo'
 
 function Footer() {
     return (
-        <Navbar >
-            <div className="container d-block d-md-flex mt-4">
-                <div className="d-block d-md-flex mb-3">
-                    <p className="small mr-3 mb-1">Visit our social media pages:
-                    </p>
-                    <a className="mr-3" href="https://www.linkedin.com/company/prodevs-nigeria/?viewAsMember=true" target="_blank">
-                            <img src={require('../../assets/images/svgs/linkedin.svg').default} width="20" />
-                        </a>
-                        <a href="https://web.facebook.com/prodevs.io?_rdc=1&_rdr" target="_blank">
-                            <img src={require('../../assets/images/svgs/facebook.svg').default} width="20" />
-                        </a>
-                        <a className="mx-3" href="https://twitter.com/Prodevs_io" target="_blank">
-                            <img src={require('../../assets/images/svgs/twitter.svg').default} width="20" />
-                        </a>
-                        <a  href="https://www.instagram.com/prodevs_io" target="_blank">
-                            <img src={require('../../assets/images/svgs/instagram.svg').default} width="20" />
-                        </a>
+        <footer className='px-0 pb-2 mt-4'>
+            <Container fluid>
+                <Row className='align-items-center'>
+                    <Col md="3" className='my-2'>
+                        <div className="d-md-inline-flex d-flex justify-content-center align-items-top">
+                            {[{
+                                route: "About Us",
+                                link: `/about`,
+                            }, {
+                                route: "Privacy",
+                                // link: `http://experts.coachmie.com/privacy`
+                                link: `/privacy`
+                            }].map((linkObj) => (
+                                <p key={linkObj.route} className="align-items-center justify-content-center mb-0 small">
+                                    <a className="mx-2 text-muted d-flex align-items-center" href={linkObj.link} key={linkObj.link}>
+                                        {linkObj.route}
+                                    </a>
 
-                </div>
-                <div className="ml-md-auto d-md-flex d-block">
-                    <p className="small mb-2 mr-2">Copyright &copy; 2021 ProDevs.io.</p>
-                    <p className="small  mb-2">All Rights Reserved</p>
+                                </p>
+                            ))}
+                        </div>
+                    </Col>
+                    <Col md="6" className='text-center my-2'>
+                        <a href="mailto:hello@coachmie.com" className='text-muted'>
+                            {/* <img src={require(`assets/images/svg/icons/ic_mail.svg`).default} width="30" alt="mail" /> */}
+                            <i className="fas fa-envelope" aria-hidden="true"></i>
+                        </a>
+                        {[{
+                            image: "linkedin",
+                            link: 'https://www.linkedin.com/company/coachmie-limited',
+                            className: "fab fa-linkedin-in"
+                        }, {
+                            image: "twitter",
+                            link: 'https://twitter.com/coachmie_',
+                            className: "fab fa-twitter"
+                        }, {
+                            image: "instagram",
+                            link: 'https://www.instagram.com/coachmie_/',
+                            className: "fab fa-instagram"
+                        }].map((linkObj) => (
+                            <a className="ml-1 text-muted" href={linkObj.link} key={linkObj.link}>
+                                <i className={linkObj.className} aria-hidden="true"></i>
+                                {/* <img src={require(`assets/images/svg/icons/ic-${linkObj.image}.svg`)} width="30" alt={linkObj.image} /> */}
+                            </a>
+                        ))}
+                    </Col>
 
-                </div>
-            </div>
-        </Navbar >
+                    <Col md="3" className='text-center my-2 text-md-right'>
+                        <p className='mb-0 pb-0 text-muted cursor-pointer' onClick={() => {
+                            window.scrollTo({
+                                top: 0,
+                                behavior: "smooth"
+                            });
+                        }}>Coachmie, Inc</p>
+                    </Col>
+                </Row>
+            </Container>
+        </footer>
     )
 }
 

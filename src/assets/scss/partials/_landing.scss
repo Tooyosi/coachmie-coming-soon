@@ -2,6 +2,7 @@
     font-family: Proxima Nova;
 }
 .content{
+    padding-top: 80px !important;
     min-height: 75vh;
     .underline{
         // padding: 2px;
@@ -47,4 +48,30 @@
         }
 
     }
+}
+
+.main-text{
+    color: #22215B;
+    font-family: Gilroy;
+    font-size: 45px;
+    font-weight: 700;
+    letter-spacing: -.8999999761581421px;
+    line-height: 59px;
+}
+
+.top-background{
+    background-image: url("../../images/about-bg.svg");
+    background-color: rgba(37,138,255,.09);
+    background-position: right;
+    background-repeat: no-repeat;
+    border-radius: 27px;
+    min-height: 80vh;
+    align-items: center;
+    .col{
+        height: max-content;
+    }
+}
+
+.cursor-pointer{
+    cursor: pointer;
 }

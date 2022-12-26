@@ -1,0 +1,135 @@
+#about {
+  // margin-bottom: 300px;
+  .header-text{
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 180%;
+    /* or 65px */
+    
+    text-align: center;
+    letter-spacing: 0.0168em;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    
+    /* font grey */
+    
+    color: #22215B;      
+  }
+  .top {
+    padding-top: 80px !important;
+    background-image: url("../../images/about-bg.jpg");
+    // min-height: 100vh;
+    width: 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+
+    @media (min-width: 1px) and (min-width: #{map-get($grid-breakpoints, 'lg')}) {
+      .container {
+        height: 100vh
+      }
+    }
+
+    @media (min-width: 1px) and (max-width: #{map-get($grid-breakpoints, 'lg') - .02px}) {
+      .container {
+        height: 100%
+      }
+    }
+  }
+
+  @media (min-width: 1px) and (max-width: #{map-get($grid-breakpoints, 'lg') - .02px}) {
+    margin-bottom: 70px;
+    margin-top: 70px;
+  }
+
+  @media (min-width: 1px) and (max-width: #{map-get($grid-breakpoints, 'md') - .02px}) {
+    // margin-top: 150px;
+  }
+
+  p {
+    font-style: normal;
+    font-size: 24px;
+    // line-height: 150%;
+    /* or 36px */
+
+    letter-spacing: 0.0168em;
+    font-feature-settings: "tnum" on, "lnum" on;
+
+
+
+    font-family: Gilroy;
+    font-weight: 400;
+    line-height: 36px;
+    
+  }
+
+  .contact {
+    .card {
+      background: $white;
+      border: 1px solid #d9dbe9;
+      padding: 20px;
+      box-sizing: border-box;
+      box-shadow: 0px 48px 100px rgba(10, 4, 60, 0.1);
+      border-radius: 30px;
+    }
+  }
+
+  #board{
+      .dir-name{
+        border-left: 2px solid #258AFF;
+        border-radius: 3px;
+        h4{
+          font-family: Gilroy-Bold;
+          font-size: 21px;
+          line-height: 32px;
+          letter-spacing: 0.0168em;
+          text-align: left;
+        }
+      }
+
+      .dir-description{
+        p{
+          font-family: Gilroy-Medium;
+          font-size: 20px;
+          line-height: 32px;
+          letter-spacing: 0.0168em;  
+          color: rgba(34, 33, 91, 0.6);
+        }      
+      }
+  }
+
+  #guiding{
+
+    .card{
+      border-radius: 0;
+      &.first-card{
+        border-radius: 20px 20px 0 0;
+      }
+      &.last-card{
+        border-radius: 0 0 20px 20px;
+      }
+    }
+    h5{
+      // font-family: Gilroy-Bold;
+      font-family: 'Gilroy';
+      font-size: 21px;
+      line-height: 32px;
+      letter-spacing: 0.0168em;
+      text-align: left;      
+      color: #22215B;
+    }
+
+    span{
+      font-family: 'Gilroy';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 180%;
+      
+      letter-spacing: 0.0168em;
+      font-feature-settings: 'tnum' on, 'lnum' on;
+      
+      color: rgba(34, 33, 91, 0.6);
+    }
+  }
+}
