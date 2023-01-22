@@ -11,17 +11,22 @@ import {
     // DropdownToggle,
     // DropdownMenu,
     // DropdownItem,
-    Container
+    Container,
+    NavbarToggler,
+    Collapse,
+    Nav,
+    NavItem,
+    NavLink
 } from 'reactstrap';
 import Logo from './Logo';
 import { Link } from "react-router-dom"
 import { EarlyAccess } from '../../pages/Landing/SubComponents/Content';
 
 const Header = (props) => {
-    // const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
     // const [isDropdown, setIsDropdown] = useState(false);
 
-    // const toggle = () => setIsOpen(!isOpen);
+    const toggle = () => setIsOpen(!isOpen);
     // const toggleDropdown = (param) => setIsDropdown(param || !isDropdown);
 
     // const getActiveClassName = (url) => {
@@ -44,26 +49,17 @@ const Header = (props) => {
                 <Link className="nav-brand" to="/">
                     <Logo style={{ height: "30px" }} />
                 </Link>
-                <div className='ml-auto'>
-                <EarlyAccess />
-                </div>
-                {/* <NavbarToggler onClick={toggle} />
+                <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
-                    <Nav className="ml-auto mt-md-0 mt-4" navbar>
-                        <NavItem className={`${getActiveClassName('/')}`}>
-                            <NavLink className="nav-link" href="https://www.prodevs.io/about" target="_blank">About Us</NavLink>
+                    <Nav className="ml-auto mt-md-0 mt-4 text-center" navbar>
+                        <NavItem>
+                            <NavLink className="nav-link text-primary-blue" href="/about">About Us</NavLink>
                         </NavItem>
-                        <NavItem className={`${getActiveClassName('/#trackrecord')}`}>
-                            <NavLink  href="https://app.prodevs.io/explore" target="_blank">Explore</NavLink>
-                        </NavItem>
-                        <NavItem className={`${getActiveClassName('/contact')}`}>
-                            <a className="nav-link" href="mailto:info@prodevs.io">Contact</a>
-                        </NavItem>
-                        <NavItem className={`${getActiveClassName('/blog')}`}>
-                            <a className="nav-link" href="https://blog.prodevs.io/?gi=38c78a8e64b0" target="_blank">Blog</a>
+                        <NavItem className='mx-0'>
+                            <EarlyAccess />
                         </NavItem>
                     </Nav>
-                </Collapse> */}
+                </Collapse>
             </Container>
         </Navbar>
     );

@@ -7,11 +7,14 @@ export const BoardMembers = () => {
         <Container>
             <Row>
                 <Col sm="12">
-                    <h3 className='header-text mb-3 mt-5'>Board Members</h3>
+                    <h3 className='header-text mb-3 mt-5'>Advisory Board Members</h3>
                 </Col>
             </Row>
             <Row>
                 {[{
+                    name: "Owolabi Adekoya",
+                    description: `Sr. SRE@<b>VMware</b>. Previously, Staff Software Engineer@<b>IBM</b> & Researcher@<b>University of Saskatchewan</b>.`
+                },{
                     name: "Adeshina Alani",
                     description: `TPM Privacy@<b>Meta</b>. Previously, Researcher @<b>University of Victoria</b>.`
                 },{
@@ -37,8 +40,11 @@ export const BoardMembers = () => {
                     name: "Idris Malik, PhD",
                     description: `ML Engineer@<b>Meta</b>, Previously, Sr. Data Scientist@<b>PwC</b> & Researcher@<b>McGill</b>.`
                 },{
-                    name: "Owolabi Adekoya",
-                    description: `Sr. SRE@<b>VMware</b>. Previously, Staff Software Engineer@<b>IBM</b> & Researcher@<b>University of Saskatchewan</b>.`
+                    name: "Yemisi Isidi",
+                    description: "Business coach@Future Females, Co-founder@<b>Thriift Africa</b>.Previously, Candidate@<b>Aston University</b>."
+                },{
+                    name: "Rachael Omodanisi",
+                    description: "Business & Investment Analyst@Leadway Assurance. Data Scientist@<b>University of Glasgow</b>"
                 }].map((director, i)=>(
                     <Col lg="3" md="4" sm="6" key={i} className="mb-5">
                         <div className='dir-name'>

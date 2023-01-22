@@ -52,11 +52,19 @@
 
 .main-text{
     color: #22215B;
+    // font-family: Gilroy;
+    // font-size: 45px;
+    font-weight: 600;
+    // letter-spacing: -.8999999761581421px;
+    // line-height: 59px;
     font-family: Gilroy;
-    font-size: 45px;
-    font-weight: 700;
-    letter-spacing: -.8999999761581421px;
-    line-height: 59px;
+    font-size:calc(35px + 2.5vw);
+    line-height: calc(50px + 2.5vw);
+    /* or 94% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
 }
 
 .top-background{
@@ -74,4 +82,49 @@
 
 .cursor-pointer{
     cursor: pointer;
+}
+
+.card{
+    .card-header{
+        background: #F8FAFC;
+        box-shadow: 0px 1px 4px rgba(23, 23, 37, 0.1);
+        border-radius: 8px;
+        border-bottom: none;
+    }
+    .inner-card{
+        width: 50%;
+        cursor: pointer;
+        p{
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            letter-spacing: -0.9px;
+            color: #22215B;
+        }
+        &:nth-child(1){
+            border-right: .5px solid #d5dade;
+        } 
+        &:nth-child(2){
+            border-left: .5px solid #d5dade;
+        }
+        hr{
+            display: none;
+        }
+        &.active{
+            background: #ececec !important;
+            img, p{
+                // opacity: 0.6;
+            }
+            hr{
+                display: block;
+                width: 50%;
+                background-color: #258AFF;
+                height: 2px;
+                margin-top: 0;
+                margin-bottom: 0;
+
+            }
+        }
+    }
 }

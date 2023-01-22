@@ -40,10 +40,12 @@ $creamWhite: #f9fafb;
 $white: #ffffff;
 $light-yellow: #fffaee;
 $black-faint1: rgba(0, 0, 0, 0.7);
+$primary-blue: #22215B;
 
 // CUSTOM THEME
 $theme-colors: (
-  "primary": $primary
+  "primary": $primary,
+  "primary-blue": $primary-blue
 );
 
 
@@ -79,7 +81,6 @@ $primary-green-hover-faint4: rgba(52, 117, 58, 0.1);
 $primary-green-hover-faint5: rgba(52, 117, 58, 0.06);
 
 
-$primary-blue: #22215B;
 $primary-blue-hover: #14133b;
 $primary-blue-active: #03020f;
 

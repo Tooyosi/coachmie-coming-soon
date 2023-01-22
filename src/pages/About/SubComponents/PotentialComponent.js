@@ -42,7 +42,7 @@ const GuidingAccordion = () => {
                             Guiding Culture
                         </h1>
                     </Col>
-                    <Col md="12">
+                    <Col md="8" className='mx-auto'>
                         {questionsArr.map((item, i) => (
                             <div className={`card mb-0 ${i === 0 && "first-card"} ${i === (questionsArr.length - 1) && "last-card"}`} key={i}>
                                 <div className="card-body">
@@ -92,7 +92,7 @@ const PotentialComponent = () => {
                     {/* <Col sm="12" className='my-5'>
                         <img src={require('../../../assets/images/svgs/percentage-graph.svg').default} className="img-fluid my-5" alt="data" />
                     </Col> */}
-                    <Col sm="12" className='mt-5'>
+                    <Col sm="12" className='mt-5 d-none'>
                         <h1 className='text-center mb-3 header-text'>
                             The Community-Driven Stack
                         </h1>
@@ -101,7 +101,7 @@ const PotentialComponent = () => {
 
                         </p>
                     </Col>
-                    <Col sm="12" className='mt-5'>
+                    <Col sm="12" className='mt-5  d-none'>
                         <img src={require('../../../assets/images/svgs/community.svg').default} className="img-fluid" alt="data" />
                     </Col>
                     {/* <Col sm="12" className='d-none'>
@@ -124,7 +124,7 @@ const PotentialComponent = () => {
                     </Col> */}
                 </Row>
                 <Row>
-                    <Col lg="6" md="10" className='mx-auto'>
+                    <Col lg="8" md="10" className='mx-auto'>
                         <GuidingAccordion />
                     </Col>
                 </Row>

@@ -45,7 +45,7 @@ function Footer() {
                             link: 'https://www.instagram.com/coachmie_/',
                             className: "fab fa-instagram"
                         }].map((linkObj) => (
-                            <a className="ml-1 text-muted" href={linkObj.link} key={linkObj.link}>
+                            <a className="ml-1 text-muted" target="_blank" rel="noreferrer" href={linkObj.link} key={linkObj.link}>
                                 <i className={linkObj.className} aria-hidden="true"></i>
                                 {/* <img src={require(`assets/images/svg/icons/ic-${linkObj.image}.svg`)} width="30" alt={linkObj.image} /> */}
                             </a>
