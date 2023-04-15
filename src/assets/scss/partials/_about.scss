@@ -1,5 +1,10 @@
 #about {
   // margin-bottom: 300px;
+  .underline{
+    border-bottom: 2px solid gray;
+    cursor: pointer;
+    font-weight: bolder;
+  }
   .header-text{
     font-family: 'Gilroy';
     font-style: normal;
@@ -16,8 +21,20 @@
     
     color: #22215B;      
   }
+  hr{
+    border-top: 2px solid rgba(0,0,0,.1)
+  }
+  .custom-border-right{
+    border-right: 2px solid #dee2e6;  
+  }
+
+  @media (min-width: 1px) and (max-width: #{map-get($grid-breakpoints, 'md')}) {
+    .custom-border-right{
+      border-right: none !important;
+    }
+  }
   .top {
-    padding-top: 80px !important;
+    padding-top: 50px !important;
     background-image: url("../../images/about-bg.jpg");
     // min-height: 100vh;
     width: 100%;
@@ -89,7 +106,7 @@
 
       .dir-description{
         p{
-          font-family: Gilroy-Medium;
+          font-family: Gilroy;
           font-size: 20px;
           line-height: 32px;
           letter-spacing: 0.0168em;  

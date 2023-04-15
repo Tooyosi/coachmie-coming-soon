@@ -1,15 +1,12 @@
-import React, { useState } from 'react'
-import { Button, Col, Container, Row } from 'reactstrap'
-import CustomModal from '../../../components/common/CustomModal'
-import axios from "axios"
-import { toast } from 'react-toastify'
-import { Widget } from '@typeform/embed-react'
+import React, { useCallback, useRef, useState, useEffect } from 'react'
+import { Col, Container, Row } from 'reactstrap'
 import { PopupButton } from '@typeform/embed-react'
 
-// export const EarlyAccess = () => <a href='https://forms.gle/ANagxA5EGGVCGp899' target="_blank" rel="noreferrer" className="btn btn-primary">Get Early Access</a>
-export const EarlyAccess = () => (<PopupButton id="ysdQsN5B" className="btn btn-primary font-weight-bold">Get Early Access</PopupButton>)
+export const EarlyAccess = () => <a href='https://forms.gle/kWwpXsQM2qXKTg3b9' target="_blank" rel="noreferrer" className="btn btn-primary font-weight-bold text-dark">Get Early Access</a>
+// export const EarlyAccess = () => (<PopupButton id="ysdQsN5B" className="btn btn-primary font-weight-bold">Get Early Access</PopupButton>)
 
 const tabs = [{ icon: "learn", text: "Learn" }, { icon: "teach", text: "Teach or Consult" }]
+const colorsArray = ["black", "orange", "blue", "green", "purple"];
 export default function Content() {
     const [state, setState] = useState({
         showModal: false,
@@ -18,6 +15,26 @@ export default function Content() {
     })
 
     const [activeTab, setActiveTab] = useState(tabs[0].icon);
+    const ref = useRef();
+
+
+    const [color, setColor] = useState(colorsArray[0])
+
+    const changeColor = useCallback(()=>{
+        let colorIndex = colorsArray.indexOf(color)
+        if(colorIndex >= colorsArray.length || colorIndex < 0 ){
+            colorIndex = 0;
+        }else {
+            colorIndex += 1;
+        }
+        setColor(colorsArray[colorIndex])
+    }, [color]) 
+
+    useEffect(() => {
+        const interval = setInterval(()=>changeColor(), 1500);
+    
+        return () => clearInterval(interval);
+      }, [changeColor]);
 
     return (
         <div className="content d-flex align-items-center  mx-0 mx-md-4">
@@ -62,6 +79,12 @@ export default function Content() {
 
                             </div>
                         </div>
+                    </Col>
+                    <Col lg="5" md="4" className='d-none d-md-block'>
+                        <p className='color-text text-left text-md-right'>Introducing expert-led learning platform that's  assisted with <span className='main-color' style={{color: color}}>AI</span> - <br /> for tech, products & research</p> 
+                    </Col>
+                    <Col lg="5" md="4" className='d-block d-md-none mt-3'>
+                        <p className='color-text text-left text-md-right'>Introducing expert-led learning platform that's assisted with <span className='main-color' style={{color: color}}>AI</span> - for tech, products & research</p> 
                     </Col>
                     <Col md="7" className='mx-auto d-none text-center'>
                         <div >

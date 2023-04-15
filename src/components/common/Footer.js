@@ -28,7 +28,7 @@ function Footer() {
                         </div>
                     </Col>
                     <Col md="6" className='text-center my-2'>
-                        <a href="mailto:hello@coachmie.com" className='text-muted'>
+                        <a href="mailto:contacts@coachmie.com" className='text-muted'>
                             {/* <img src={require(`assets/images/svg/icons/ic_mail.svg`).default} width="30" alt="mail" /> */}
                             <i className="fas fa-envelope" aria-hidden="true"></i>
                         </a>
@@ -36,15 +36,17 @@ function Footer() {
                             image: "linkedin",
                             link: 'https://www.linkedin.com/company/coachmie-limited',
                             className: "fab fa-linkedin-in"
-                        }, {
-                            image: "twitter",
-                            link: 'https://twitter.com/coachmie_',
-                            className: "fab fa-twitter"
-                        }, {
-                            image: "instagram",
-                            link: 'https://www.instagram.com/coachmie_/',
-                            className: "fab fa-instagram"
-                        }].map((linkObj) => (
+                        }
+                        // , {
+                        //     image: "twitter",
+                        //     link: 'https://twitter.com/coachmie_',
+                        //     className: "fab fa-twitter"
+                        // }, {
+                        //     image: "instagram",
+                        //     link: 'https://www.instagram.com/coachmie_/',
+                        //     className: "fab fa-instagram"
+                        // }
+                        ].map((linkObj) => (
                             <a className="ml-1 text-muted" target="_blank" rel="noreferrer" href={linkObj.link} key={linkObj.link}>
                                 <i className={linkObj.className} aria-hidden="true"></i>
                                 {/* <img src={require(`assets/images/svg/icons/ic-${linkObj.image}.svg`)} width="30" alt={linkObj.image} /> */}

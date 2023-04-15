@@ -128,3 +128,14 @@
         }
     }
 }
+
+
+.color-text{
+    font-family: Gilroy;
+    font-weight: 600;
+    font-size:calc(10px + 1.5vw);
+    line-height: calc(25px + 1.5vw);
+    .main-color{
+        font-weight: bolder;
+    }
+}

@@ -21,11 +21,17 @@ export const BoardMembers = () => {
                     name: "Ahmed Tiamiyu, PhD",
                     description: `Ast. Professsor@<b>University of Calgary</b>. Previously, Research Fellow@<b>MIT</b>.`
                 },{
+                    name: "Rachael Omodanisi",
+                    description: "Business & Investment Analyst@Leadway Assurance. Data Scientist@<b>University of Glasgow</b>"
+                },{
                     name: "Ayoade Ilori, PhD",
                     description: `Data Analyst@<b>Barclays</b>. Previously, Analyst@<b>PwC</b> & Researcher@<b>Aston University</b>.`
                 },{
+                    name: "Yemisi Isidi",
+                    description: "Business coach@Future Females, Co-founder@<b>Thriift Africa</b>.Previously, Candidate@<b>Aston University</b>."
+                },{
                     name: "Babatunde David, PhD",
-                    description: `Consultant<b>@AfDB</b>. Previously, Researcher@<b>The University of Salford</b>.`
+                    description: `CEO, Seven Star Consultants Ltd & Consultant@<b>The World Bank</b>. Previously, Consultant @<b>AfDB, USAID, UNDP</b> & Research Fellow@ <b>The University of Salford</b>.`
                 },{
                     name: "Dayo Ibitoye, ARPA",
                     description: `Specialist@<b>The World 
@@ -39,12 +45,6 @@ export const BoardMembers = () => {
                 },{
                     name: "Idris Malik, PhD",
                     description: `ML Engineer@<b>Meta</b>, Previously, Sr. Data Scientist@<b>PwC</b> & Researcher@<b>McGill</b>.`
-                },{
-                    name: "Yemisi Isidi",
-                    description: "Business coach@Future Females, Co-founder@<b>Thriift Africa</b>.Previously, Candidate@<b>Aston University</b>."
-                },{
-                    name: "Rachael Omodanisi",
-                    description: "Business & Investment Analyst@Leadway Assurance. Data Scientist@<b>University of Glasgow</b>"
                 }].map((director, i)=>(
                     <Col lg="3" md="4" sm="6" key={i} className="mb-5">
                         <div className='dir-name'>
