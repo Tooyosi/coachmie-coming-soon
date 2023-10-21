@@ -82,9 +82,11 @@ export default function Content() {
                     </Col>
                     <Col lg="5" md="4" className='d-none d-md-block'>
                         <p className='color-text text-left text-md-right'>Introducing expert-led learning platform that's  assisted with <span className='main-color' style={{color: color}}>AI</span> - <br /> for tech, products & research</p> 
+                        <marquee>Learning Specializations: Cloud Engineering, Web & Blockchain Engineering, Product Design, Product Management, Site Reliability & DevOps Engineering, Privacy and Security Engineering, AI, Machine Learning and Data Engineering, Tech Research.</marquee>
                     </Col>
                     <Col lg="5" md="4" className='d-block d-md-none mt-3'>
                         <p className='color-text text-left text-md-right'>Introducing expert-led learning platform that's assisted with <span className='main-color' style={{color: color}}>AI</span> - for tech, products & research</p> 
+                        <marquee>Learning Specializations: Cloud Engineering, Web & Blockchain Engineering, Product Design, Product Management, Site Reliability & DevOps Engineering, Privacy and Security Engineering, AI, Machine Learning and Data Engineering, Tech Research.</marquee>
                     </Col>
                     <Col md="7" className='mx-auto d-none text-center'>
                         <div >
